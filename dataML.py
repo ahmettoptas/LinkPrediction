@@ -20,8 +20,8 @@ trainingData.to_csv("trainingData",index=False)
 testData.to_csv("testData",index=False)"""
 
 #Created trainingData by trainingData csv file which created frome above
-trainingData = pd.read_csv("trainingData")
-testData = pd.read_csv("testData")
+trainingData = pd.read_csv("trainingData.csv")
+testData = pd.read_csv("testData.csv")
 
 
 size = len(testData)
@@ -132,6 +132,7 @@ print(evaluate_model(predictions, y_test))
 
 print(feature_importance(columns, classifier))
 
+"""
 from sklearn.ensemble import GradientBoostingClassifier
 clf = GradientBoostingClassifier(n_estimators=32,max_depth=16,random_state=0)
 print()
@@ -156,4 +157,4 @@ y_testA = testData["label"]
 print(evaluate_model(predictionsAda, y_testA))
 
 print(feature_importance(columns, ada))
-print()
+print()"""
